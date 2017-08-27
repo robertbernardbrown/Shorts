@@ -5,7 +5,7 @@
 	var newzip = document.getElementById("zipcode").value
 
 	//set zipcode and get info from API
-zip = "'"+ zipcode +"'";
+zip = "//buttonzipcodetogohere";
 
 var weather = new XMLHttpRequest();
 weather.open("GET", "https://api.apixu.com/v1/current.json?key=3844afb51b4b4d96840161310172608&q=" + zip, false);
