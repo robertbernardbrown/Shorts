@@ -40,21 +40,39 @@ font-family: Helvetica, Arial, serif;
     <h2>Should you wear shorts or nah?</h2>
 
     <p>
-      We'll keep this short: 
+      We'll keep this short:
       <br> 1. Enter your zipcode
       <br> 2. Find out if it's cool to wear shorts today
       <br> 3. Chillax
     </p>
 
-<form action="/action_page.php">
-  
-  <input type="text" id="zipcode">
-  <br><button id="setzipcode">Set Zipcode</button>
-  <br>
+<form method= "post">
+  <div>
+  <input action="/zipcode-page" type="text" id="zipcode">
+  </div>
 </form>
 
+<div class = "button">
+  <button type = "submit" id="setzipcode">Set Zipcode</button>
+<br>
+</div>
+
 <script>
-type="text/javascript" src = backend.js 
+var zip = "'"+ zipcode +"'";
+
+var weather = new XMLHttpRequest();
+weather.open("GET", "https://api.apixu.com/v1/current.json?key=3844afb51b4b4d96840161310172608&q=" + zip, false);
+weather.send(null);
+
+var r = JSON.parse(weather.response);
+var dis = "You're currently chillin in " + r.location.name + ", " + r.location.region + ".";
+var temp = " Going to be about " + r.current.temp_f + " degrees out today.";
+var rainOrShine = " Conditions are " + r.current.condition.text + ".";
+
+console.log(dis + temp + rainOrShine);
+
+if (r.current.temp_f >= 70) {console.log("You should wear shorts today.")}
+else console.log("You shouldn't wear shorts today.");
 </script>
 
   </body>
