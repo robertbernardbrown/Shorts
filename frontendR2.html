@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang = 'en'>
+  <head>
+    <meta charset = "utf-8">
+    <meta name = "description" content = "a page for entering your location">
+    <title> Shorts Page </title>
+      <style>
+      html {
+      margin: 0%;
+      padding: 0%;
+      background-color: #19c5ff;
+      }
+      h1 {
+      color: white;
+      font-family: Georgia, "Times New Roman";
+      font-size: 3em;
+      }
+      h2 {
+      font-size: 1em;
+      font-family: Georgia;
+      }
+      p {
+      color: black;
+      font-size: 1em;
+      }
+      body {
+      width: 23%;
+      margin: 0 auto;
+      text-align: justify;
+      font-family: Helvetica, Arial, serif;
+      }
+      </style>
+  </head>
+  <body>
+    <h1>The Shortist</h1>
+    <h2>Should you wear shorts or nah?</h2>
+
+    <p>
+      We'll keep this short:
+      <br> 1. Enter your zipcode
+      <br> 2. Find out if it's cool to wear shorts today
+      <br> 3. Chillax
+    </p>
+
+      <form method= "post">
+        <div id="zipform">
+        <input type="text" id="zipcode">
+        </div>
+      </form>
+
+      <div class = "button">
+        <button type = "submit" id="setzipcode">Set Zipcode</button>
+      <br>
+      </div>
+
+      <p>
+      <div id="display">
+      </div>
+      </p>
+
+<script type="text/javascript">
+//Return API weather input
+
+//get zipcode value
+  var zip = "'"+ document.getElementById("zipform").getElementById("zipcode").value +"'";
+//get weather from API
+  var weather = new XMLHttpRequest();
+  weather.open("GET", "https://api.apixu.com/v1/current.json?key=3844afb51b4b4d96840161310172608&q=" + zip, false);
+  weather.send(null);
+//get value of form when button is pressed
+
+function returnWeather (){
+  var click = document.getElementById("setzipcode").onclick
+
+  if (click) {
+  var r = JSON.parse(weather.response);
+  var dis = "You're currently chillin in " + r.location.name + ", " + r.location.region + ".";
+  var temp = " Going to be about " + r.current.temp_f + " degrees out today.";
+  var rainOrShine = " Conditions are " + r.current.condition.text + ".";
+
+  getElementById("display") =
+  if (r.current.temp_f >= 70) {console.log(dis + temp + rainOrShine + " You should wear shorts today.")}
+  else console.log(dis + temp + rainOrShine + " You shouldn't wear shorts today.");
+  }
+}
+</script>
+  </body>
+</html>
