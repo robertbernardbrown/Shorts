@@ -55,6 +55,7 @@
 
       <p>
       <div id="display">
+
       </div>
       </p>
 
@@ -62,15 +63,19 @@
 //Return API weather input
 
 //get zipcode value
-  var zip = "'"+ document.getElementById("zipform").getElementById("zipcode").value +"'";
+  var zip = document.getElementById("zipcode").value;
 //get weather from API
-  var weather = new XMLHttpRequest();
-  weather.open("GET", "https://api.apixu.com/v1/current.json?key=3844afb51b4b4d96840161310172608&q=" + zip, false);
-  weather.send(null);
+
+  var apiUrl = "https://api.apixu.com/v1/current.json?key=3844afb51b4b4d96840161310172608&q=" + zip;
+  console.log(apiUrl);
+  //var weather = new XMLHttpRequest();
+  //weather.open("GET", "https://api.apixu.com/v1/current.json?key=3844afb51b4b4d96840161310172608&q=" + zip, false);
+  //weather.send(null);
+
 //get value of form when button is pressed
 
 function returnWeather (){
-  var click = document.getElementById("setzipcode").onclick
+  var click = document.getElementById("setzipcode").onclick;
 
   if (click) {
   var r = JSON.parse(weather.response);
@@ -78,9 +83,10 @@ function returnWeather (){
   var temp = " Going to be about " + r.current.temp_f + " degrees out today.";
   var rainOrShine = " Conditions are " + r.current.condition.text + ".";
 
-  getElementById("display") =
-  if (r.current.temp_f >= 70) {console.log(dis + temp + rainOrShine + " You should wear shorts today.")}
-  else console.log(dis + temp + rainOrShine + " You shouldn't wear shorts today.");
+  document.getElementById("display").innerHTML = dis + temp + rainOrShine;
+
+  //if (r.current.temp_f >= 70) {console.log(dis + temp + rainOrShine + " You should wear shorts today.")}
+  //else console.log(dis + temp + rainOrShine + " You shouldn't wear shorts today.");
   }
 }
 </script>
