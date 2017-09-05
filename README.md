@@ -24,4 +24,5 @@ Text Editor - Sublime Text 2
 
 * Add tests to ensure zipcode input  
 * Add images and more visual esthetic  
-* Add functionality with hitting "enter" key
+* Add functionality with hitting "enter" key  
+* Optimize code for mobile
