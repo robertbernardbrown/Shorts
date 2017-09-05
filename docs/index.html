@@ -1,1 +1,43 @@
+<!doctype html>
+<html lang = 'en'>
+  <head>
+    <meta charset = "utf-8">
+    <meta name = "description" content = "a page for entering your location">
+    <title> Shorts Page </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>The Shortist</h1>
+    <h2>Should you wear shorts or nah?</h2>
 
+    <p>
+      We'll keep this short:
+      <br> 1. Enter your zipcode
+      <br> 2. Find out if it's cool to wear shorts today
+      <br> 3. Chillax
+    </p>
+
+      <form method= "post">
+        <div id="zipform">
+        <input type="text" id="zipcode">
+        </div>
+      </form>
+
+      <div class = "button">
+        <button type = "submit" id="setzipcode" onclick="returnWeather()">Set Zipcode</button>
+      <br>
+      </div>
+
+      <p>
+      <div id="display">
+      </div>
+      </p>
+
+      <p>
+      <div id="display-reco">
+      </div>
+      </p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
