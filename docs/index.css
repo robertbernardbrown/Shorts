@@ -1,0 +1,24 @@
+      html {
+      margin: 0%;
+      padding: 0%;
+      background-color: #19c5ff;
+      }
+      h1 {
+      color: white;
+      font-family: Georgia, "Times New Roman";
+      font-size: 3em;
+      }
+      h2 {
+      font-size: 1em;
+      font-family: Georgia;
+      }
+      p {
+      color: black;
+      font-size: 1em;
+      }
+      body {
+      width: 23%;
+      margin: 0 auto;
+      text-align: justify;
+      font-family: Helvetica, Arial, serif;
+      }
