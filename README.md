@@ -15,7 +15,7 @@ Text Editor - Sublime Text 2
 
 * Zipcode button  
 * CSS3 Style  
-* Weather API
+* Weather API - https://www.apixu.com/doc/
 
 ## Site Preview
 ![alt text](https://github.com/robertbernardbrown/Shorts/blob/master/Shortist.png)
