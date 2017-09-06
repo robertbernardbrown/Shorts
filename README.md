@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Shortist recommends whether or not a user should wear shorts on the day they ask. A user enters their zipcode and presses the button to recieve their recomendation.
+The Shortist recommends whether or not a user should wear shorts on any given day. A user enters their zipcode and presses the button to recieve their recomendation from The Shortist.
 
 Live site: https://robertbernardbrown.github.io/Shorts/
 
