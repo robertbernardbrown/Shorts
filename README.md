@@ -14,7 +14,7 @@ Text Editor - Sublime Text 2
 ## Features
 
 * Zipcode button  
-* CSS3 Style  
+* CSS Style  
 * Weather API - https://www.apixu.com/doc/
 
 ## Site Preview
