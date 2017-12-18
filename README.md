@@ -23,6 +23,6 @@ Text Editor - Sublime Text 2
 ## Future Development
 
 * Add tests to ensure zipcode input  
-* Add images and more visual esthetic  
+* Add images and more visual aesthetic  
 * Add functionality with hitting "enter" key  
 * Optimize code for mobile
